@@ -1,0 +1,6 @@
+{
+  "name": "Gateway Link",
+  "description": "Quickly connect to and manage your local wireless router or modem gateway portal at 192.168.1.254.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
