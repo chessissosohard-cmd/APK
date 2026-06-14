@@ -18,19 +18,11 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Install Android SDK tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y wget unzip
-
       - name: Install Gradle
-        run: sudo apt-get install -y gradle
-
-      - name: Create .env
-        run: echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" > .env
+        run: sudo apt-get update && sudo apt-get install -y gradle
 
       - name: Build APK
-        run: gradle assembleDebug --stacktrace
+        run: gradle :app:assembleDebug --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
